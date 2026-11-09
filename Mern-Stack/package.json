@@ -10,6 +10,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "eruda": "^3.4.3",
+    "lucide": "^1.70.0",
+    "lucide-react": "^1.70.0",
     "react": "^19.3.1",
     "react-dom": "^19.3.1"
   },

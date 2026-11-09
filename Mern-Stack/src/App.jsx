@@ -1,122 +1,143 @@
-import { useState } from 'react'
-import heroImg from './assets/hero.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import './App.css'
+import Card from './components/Card.jsx';
 
-function App() {
-  const [count, setCount] = useState(0)
+
+
+const App = () => {
+
+  const listing = [
+    {
+      "id": 1,
+      "brandLogo": "https://www.google.com/s2/favicons?domain=amazon.com&sz=128",
+      "companyName": "Amazon",
+      "datePosted": "5 days ago",
+      "jobPost": "Senior UI/UX Designer",
+      "tag1": "Senior Level",
+      "tag2": "Part Time",
+      "pay": "$120/hr",
+      "location": "California, USA"
+    },
+    {
+      "id": 2,
+      "brandLogo": "https://www.google.com/s2/favicons?domain=netflix.com&sz=128",
+      "companyName": "Netflix",
+      "datePosted": "1 week ago",
+      "jobPost": "Product Designer",
+      "tag1": "Mid Level",
+      "tag2": "Full Time",
+      "pay": "$95/hr",
+      "location": "California, USA"
+    },
+    {
+      "id": 3,
+      "brandLogo": "https://www.google.com/s2/favicons?domain=meta.com&sz=128",
+      "companyName": "Meta",
+      "datePosted": "2 days ago",
+      "jobPost": "Senior Frontend Developer",
+      "tag1": "Senior Level",
+      "tag2": "Remote",
+      "pay": "$140/hr",
+      "location": "California, USA"
+    },
+    {
+      "id": 4,
+      "brandLogo": "https://www.google.com/s2/favicons?domain=google.com&sz=128",
+      "companyName": "Google",
+      "datePosted": "3 days ago",
+      "jobPost": "Software Engineer",
+      "tag1": "Mid Level",
+      "tag2": "Full Time",
+      "pay": "$110/hr",
+      "location": "California, USA"
+    },
+    {
+      "id": 5,
+      "brandLogo": "https://www.google.com/s2/favicons?domain=apple.com&sz=128",
+      "companyName": "Apple",
+      "datePosted": "1 day ago",
+      "jobPost": "Senior Visual Designer",
+      "tag1": "Senior Level",
+      "tag2": "Part Time",
+      "pay": "$125/hr",
+      "location": "California, USA"
+    },
+    {
+      "id": 6,
+      "brandLogo": "https://www.google.com/s2/favicons?domain=microsoft.com&sz=128",
+      "companyName": "Microsoft",
+      "datePosted": "6 days ago",
+      "jobPost": "Cloud Solutions Architect",
+      "tag1": "Senior Level",
+      "tag2": "Full Time",
+      "pay": "$135/hr",
+      "location": "California, USA"
+    },
+    {
+      "id": 7,
+      "brandLogo": "https://www.google.com/s2/favicons?domain=tesla.com&sz=128",
+      "companyName": "Tesla",
+      "datePosted": "4 days ago",
+      "jobPost": "Product Design Engineer",
+      "tag1": "Mid Level",
+      "tag2": "Contract",
+      "pay": "$100/hr",
+      "location": "California, USA"
+    },
+    {
+      "id": 8,
+      "brandLogo": "https://www.google.com/s2/favicons?domain=adobe.com&sz=128",
+      "companyName": "Adobe",
+      "datePosted": "1 week ago",
+      "jobPost": "Creative Director",
+      "tag1": "Senior Level",
+      "tag2": "Part Time",
+      "pay": "$150/hr",
+      "location": "California, USA"
+    },
+    {
+      "id": 9,
+      "brandLogo": "https://www.google.com/s2/favicons?domain=nvidia.com&sz=128",
+      "companyName": "NVIDIA",
+      "datePosted": "2 days ago",
+      "jobPost": "AI/ML Engineer",
+      "tag1": "Senior Level",
+      "tag2": "Full Time",
+      "pay": "$160/hr",
+      "location": "California, USA"
+    },
+    {
+      "id": 10,
+      "brandLogo": "https://www.google.com/s2/favicons?domain=uber.com&sz=128",
+      "companyName": "Uber",
+      "datePosted": "3 hours ago",
+      "jobPost": "Mobile App Developer",
+      "tag1": "Mid Level",
+      "tag2": "Remote",
+      "pay": "$105/hr",
+      "location": "California, USA"
+    }
+  ];
 
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
-          </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
-
-      <div className="ticks"></div>
-
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
-        </div>
-      </section>
-
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
+    <div className="parent">
+      <div className="grid">
+        {listing.map((el, idx) => {
+          return (
+            <div key={idx}> 
+              <Card 
+                brandLogo={el.brandLogo}
+                companyName={el.companyName}
+                datePosted={el.datePosted}
+                jobPost={el.jobPost}
+                tag1={el.tag1}
+                tag2={el.tag2} 
+                pay={el.pay}
+                location={el.location} />
+            </div>
+          )
+        })}
+      </div>
+    </div>
   )
-}
+};
 
-export default App
+export default App;
